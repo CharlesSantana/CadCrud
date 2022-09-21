@@ -1,0 +1,41 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+      }
+
+/*  titulo do meu cadastro*/      
+   .titulo1{
+    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: blue;
+  
+  
+       
+   }
+
+   .titulo2{
+    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: grey;
+
+       
+   }
+
+   .cadastro form{
+    font-family: 'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: grey;
+    transition: 0.5s;
+
+   }
+   input{
+    border-radius: 4px;
+   }
+   /*inicio do cadastro*/
