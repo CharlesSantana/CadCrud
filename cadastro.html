@@ -5,6 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style_form.css" rel="stylesheet">
+     
+            <script src="js/mask.js"></script>
+    
+
+
+            <?php
+            echo "Olá, " . $_SESSION['usuarioNome'];
+            >
+
+
+
     </head>
     <body>
     
@@ -29,114 +40,131 @@
                 <div class="main_cta">
                     <h2>Pc Conserto Informatica Tecnologia</h2>
                     <P>We are pc Conserto</P>
-                    <button>Get Start</button>
-                
+                    <button type="reset">Reset</button>
+                    <button class="btn-menu" onclick="window.location.href='relatorio.php'">Relatorio de Cadastros</button>
+              
+
+                    <form action="NovoCliente.php" method="post" ">
                     
                     <div class="entrada">
                         <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <input type="text" required="required" name="nome" placeholder="nome">  
                         </div>
                     <br>
                     <div class="entrada">
                         <label for="exampleFormControlInput1" class="form-label">Sobrenome</label>
-                        <input type="sobrenome" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <input type="text" required="required"name="sobrenome"  placeholder="Sobrenome">  
                     </div>
                     <br>
                     <div class="entrada">
                         <label for="exampleFormControlInput1" class="form-label">Cpf</label>
-                        <input type="Cpf" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <input type="text"required="required" name="cpf" placeholder="cpf" maxlength="15" autocomplete="off">  
+                    </div>
+
+                    <br>
+                    <div class="entrada">
+                        <label for="exampleFormControlInput1" class="form-label">Identidade</label>
+                        <input type="text" required="required"name="rg" placeholder="Identidade" maxlength="15" autocomplete="off">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">nascimento</label>
-                        <input type="nascimento" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Fone/Whatsapp</label>
+                        <input type="text" required="required" name="fone" placeholder="(00) 00000-0000" id="telefone" maxlength="15" autocomplete="off">  
+
+                       
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">endereco</label>
-                        <input type="endereco" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                       <label for="exampleFormControlInput1" class="form-label">Email</label>
+                       <input type="text" required="required" name="email" placeholder="Email">  
+                   </div>
+                   <br>
+                    <div class="entrada">
+                        <label for="exampleFormControlInput1" class="form-label">Nome Contato</label>
+                        <input type="text" required="required"name="nomecontato" placeholder="Nome de um contato">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">fone</label>
-                        <input type="fone" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
-                    </div>
-                    <br>
-                    <div class="entrada">
-                    <label for="exampleFormControlInput1" class="form-label">fone</label>
-                    <input type="fone" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                    <label for="exampleFormControlInput1" class="form-label">Fone Contato</label>
+                    <input type="text" required="required"name="fonecontato"  id="telefone" placeholder="Fone e um contato" maxlength="15" autocomplete="off">  
                       </div>
                         <br>
                      <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">fone</label>
-                        <input type="fone" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Endereco</label>
+                        <input type="text" required="required" name="endereco" placeholder="Endereco">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">fone</label>
-                        <input type="fone" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Bairro</label>
+                        <input type="text" required="required" name="bairro" placeholder="Bairro">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">fone</label>
-                        <input type="fone" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Cidade</label>
+                        <input type="text" required="required" name="cidade" placeholder="Cidade">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Estado</label>
+                        <input type="text" required="required" name="estado" placeholder="Estado">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">trabalho</label>
-                        <input type="trabalho" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Local Trabalho</label>
+                        <input type="text" required="required" name="trabalho" placeholder="Local Trabalho">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">cidade</label>
-                        <input type="cidade" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Fone Trabalho</label>
+                        <input type="text" required="required" name="fonetrabalho"  id="telefone" placeholder="Fone Trabalho" maxlength="15" autocomplete="off>  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">estado</label>
-                        <input type="estado" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Nome esposa</label>
+                        <input type="text" re uired="required" name="esposa" placeholder="Nome esposa">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">cep</label>
-                        <input type="cep" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Nome Pai</label>
+                        <input type="text" required="required"name="pai" placeholder="Nome Pai">  
+                    </div> 
+                    <br>
+                    <div class="entrada">
+                        <label for="exampleFormControlInput1" class="form-label">Nome Mae</label>
+                        <input type="text" required="required" name="mae" placeholder="Nome Mae">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">mae</label>
-                        <input type="mae" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Quantidade Filhos</label>
+                        <input type="text" required="required" name="qtdfilhos" placeholder="Quantidade de Filhos">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">pai</label>
-                        <input type="pai" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Fale Sobre Voce</label>
+                        <input type="text" nrequired="required" name="about" placeholder="Seja Breve em suas qualidades">  
                     </div>
                     <br>
                     <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">esposa</label>
-                        <input type="esposa" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
-                    </div>
-                    <br>
-                    <div class="entrada">
-                        <label for="exampleFormControlInput1" class="form-label">quantidade filhos</label>
-                        <input type="qtdfilho" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <label for="exampleFormControlInput1" class="form-label">Cidade Favorita</label>
+                        <input type="text" required="required" name="favcidade" placeholder="Cidade Favorita">  
                     </div>
                     <br>
                     <div class="entrada">
                         <label for="exampleFormControlInput1" class="form-label">datacadastro</label>
-                        <input type="dtcad" class="form-control" id="exampleFormControlInput1" placeholder="nome">  
+                        <input type="text" required="required" name="dtcadastro" placeholder="data de cadastro">  
                     </div>
                     <br>
+                   
 
-                      
+                  
+                    <button><type="submit" >Enviar</button>
+                    <button type="reset">Reset</button>
+                   
+                    
+                    </form>
                             
 
-                    <button>Get Start</button>
+          
 
 
                 </div>
